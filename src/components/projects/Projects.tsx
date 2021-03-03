@@ -15,9 +15,6 @@ const Projects: React.FC = () => {
                 return <Fade delay={(i) * 300}><Project key={p.title} project={p}/></Fade>
             })}
         </div>
-        <div>
-            this website was made with Gatsby
-        </div>
     </Container>
 }
 

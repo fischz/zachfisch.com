@@ -74,6 +74,7 @@ export const NavItem = styled.div`
 
 export const NavSeperator = styled.div`
     border-bottom: 1px solid ${props => props.theme.colors.text};
+    opacity: 0.8;
 `
 
 export const NavIcon = styled(StaticImage)`
@@ -100,4 +101,5 @@ export const Title = styled.h4`
 export const SubTitle = styled.h5`
     margin: 0;
     margin-bottom: ${props => props.theme.margin.s};
+    color: ${props => props.theme.colors.accent};
 `

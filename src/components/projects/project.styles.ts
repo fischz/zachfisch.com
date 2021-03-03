@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ProjectContainer = styled.div`
     display: flex;
     margin-bottom: ${props => props.theme.margin.m};
-    background: ${props => props.theme.colors.background};
     @media screen and (max-width: 576px) {
         flex-direction: column;
     }
