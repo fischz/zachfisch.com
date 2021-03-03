@@ -1,0 +1,19 @@
+[{
+    "title": "Transit Tracker",
+    "image": "/transit-tracker.png",
+    "description": "A web application that allows uses to see realtime stop predictions. Uses the NextBusApi, Google Maps, and Geolocation",
+    "tech": ["React", "Typescript", "Styled Components", "Google Cloud", "Netlify"],
+    "links": {
+        "deployment": "https://www.transit.zachfisch.com/",
+        "github": "https://github.com/fischz/transit-tracker"
+    }
+},{
+    "title": "RockLab",
+    "image": "/rocklab.png",
+    "description": "My capstone project, a mobile application that utilizes computer vision and data analytics to help new rock climbers get into the hobby",
+    "tech": ["Android", "Kotlin", "Javascript", "Firebase", "Google Cloud"],
+    "links": {
+        "github": "https://github.com/fischz/transit-tracker"
+    }
+}
+]
