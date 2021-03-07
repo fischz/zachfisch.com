@@ -1,7 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { Section } from '../../shared.styles'
-import { CodeBlock, IntroContainer, Row } from './intro.styles'
+import { CodeBlock, IntroContainer, IntroImage, IntroText, Row } from './intro.styles'
 import { Fade } from 'react-reveal'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import stackoverflowdark from 'react-syntax-highlighter/dist/esm/styles/hljs/stackoverflow-dark.js'
@@ -11,7 +11,8 @@ const Intro: React.FC = () => {
     return <Section>
         <IntroContainer>
             <Row>
-            <CodeBlock>
+                <IntroImage><Fade><img src='\heroimage.png' width='350px' height='auto'/></Fade></IntroImage>
+            {/*<CodeBlock>
             <Fade>
             <SyntaxHighlighter language='typescript' style={stackoverflowdark} customStyle={{margin: 0, borderRadius: '1rem', padding:'1rem'}}>
                 {`const IndexPage: React.FC = () => {
@@ -29,9 +30,9 @@ const Intro: React.FC = () => {
 export default IndexPage;`}
             </SyntaxHighlighter>
             </Fade>
-            </CodeBlock>
+</CodeBlock>*/}
             <Fade up>
-            <div>
+            <IntroText>
                 <h3>Hi</h3>
                 <div>
                     <p>
@@ -47,7 +48,7 @@ export default IndexPage;`}
                     Get in contact with me at <a href='mailto:fischzac@gmail.com'>fischzac@gmail.com</a>
                     </p>
                 </div>
-            </div>
+            </IntroText>
             </Fade>
             </Row>
         </IntroContainer>
