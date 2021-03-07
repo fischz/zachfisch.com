@@ -12,6 +12,7 @@ const Intro: React.FC = () => {
         <IntroContainer>
             <Row>
             <CodeBlock>
+            <Fade>
             <SyntaxHighlighter language='typescript' style={stackoverflowdark} customStyle={{margin: 0, borderRadius: '1rem', padding:'1rem'}}>
                 {`const IndexPage: React.FC = () => {
     return <Layout>
@@ -27,8 +28,9 @@ const Intro: React.FC = () => {
 
 export default IndexPage;`}
             </SyntaxHighlighter>
+            </Fade>
             </CodeBlock>
-            <Fade down>
+            <Fade up>
             <div>
                 <h3>Hi</h3>
                 <div>
