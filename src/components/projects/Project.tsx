@@ -10,8 +10,9 @@ interface Project {
     description: string,
     tech: string[],
     links: {
-        deployment?: string
-        github?: string
+        deployment?: string,
+        github?: string,
+        website?: string
     }
 }
 
@@ -34,6 +35,7 @@ const Project: React.FC<Props> = ({project}) => {
             </div>
             <ProjectLinks>
                 {project.links.deployment? <ProjectLink><LinkIcon src='/external-link.svg'/><a href={project.links.deployment}>deployment</a></ProjectLink>: null}
+                {project.links.website? <ProjectLink><LinkIcon src='/link.svg'/><a href={project.links.website}>website</a></ProjectLink>: null}
                 {project.links.github? <ProjectLink><LinkIcon src='/github.svg'/><a href={project.links.github}>source</a></ProjectLink>: null}
             </ProjectLinks>
         </Details>

@@ -8,8 +8,8 @@ import Projects from '../components/projects/Projects'
 
 
 export const PageContainer = styled.div`
-    display: flex;
     @media screen and (max-width: 576px) {
+        display: flex;
         flex-direction: column;
         text-align: center;
     }

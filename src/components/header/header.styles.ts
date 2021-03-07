@@ -1,31 +1,27 @@
-import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: #eeeeee;
-    position: sticky;
-    height: 100vh;
-    top: 0;
+    position: absolute;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: 100%;
+    background: #FFFFFF;
 
     @media screen and (max-width: 576px) {
-        justify-content: space-between;
-        flex-direction: row;
-        height: auto;
+        padding: 0%;
         z-index: 1;
+        position: fixed;
+        width: 100%;
     }
 `
 
 export const NavBar = styled.div`
-    @media screen and (min-width: 576px){
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+
 `
 
 export const Hamburger = styled.div`
@@ -48,27 +44,35 @@ interface NavItemsProps {
 }
 
 export const NavItems = styled.div<NavItemsProps>`
+    display: flex;
+    flex-direction: row;
     @media screen and (max-width: 576px) {
+        flex-direction: column;
         position: absolute;
         right: 0;
         max-height: ${props => props.isOpen? '20rem': '0rem'};
         overflow-y: hidden;
-        background: #EEEEEE;
+        background: #FFFFFF;
         transition: max-height 256ms ease-out;
         width: 100%;
     }
 `
 
-export const NavItem = styled.div`
-    font-weight: bold;
+interface NavItemProps{
+    externalLink?: boolean
+}
+
+export const NavItem = styled.div<NavItemProps>`
     padding: ${props => props.theme.padding.m};
     
+
     a, a:visited, a:active, a:link {
-        color: ${props => props.theme.colors.text}
+        font-weight: normal;
+        color: ${props => props.externalLink?  'rgba(0,0,0,0.6)': props.theme.colors.text};
     }
 
     a:hover {
-        color: ${props => props.theme.colors.accent}
+        color: ${props => props.theme.colors.accent};
     }
 `
 

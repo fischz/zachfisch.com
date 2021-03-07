@@ -31,14 +31,13 @@ const Header: React.FC = () => {
                         <NavItem>
                             <Link to='/#projects'> Projects </Link>
                         </NavItem>
-                        <NavSeperator/>
-                        <NavItem>
+                        <NavItem externalLink={true}>
                             <a href='/zachfisch.pdf'>Resume </a>
                         </NavItem>
-                        <NavItem>
+                        <NavItem externalLink={true}>
                             <a href='https://github.com/fischz'>Github</a>
                         </NavItem>
-                        <NavItem>
+                        <NavItem externalLink={true}>
                             <a href='https://www.linkedin.com/in/zachfisch/'>LinkedIn</a>
                         </NavItem>
                     </NavItems>
